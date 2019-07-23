@@ -1,0 +1,372 @@
+@import url(<link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">);
+
+body { font-family: 'Ranga', cursive; font-size: 20px; }
+
+
+
+nav {
+ 	background-color: rgba(0,0,0,.65);
+ 	position: fixed;
+ 	top: 0px; left: 0px;
+ 	padding: 0px 0 0 0;
+ 	width: 100%;
+}
+
+nav #alogo { background: url(../images/logo.png) no-repeat ; margin-left: 9px; padding-right: 110px; margin-top: 45px; padding-bottom: 53px;}
+
+nav #schimg { background: url("../images/search.png") no-repeat; padding-left: 4px; padding-right: 20px; margin-bottom: 20px;}
+
+nav::after { content: ''; display: block; clear: both; }
+
+nav ul {list-style: none; margin: 0; padding: 0px; }
+
+nav ul li:hover { background-color: #2b0306; }
+nav ul li:hover > ul { display: block; }
+
+nav ul li a {
+	display: inline-block;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	width: 125px;
+	position: relative;
+
+}
+
+
+
+nav a {text-decoration: none; color: white;}
+nav #navcart {background: url("../images/cart.png") no-repeat ;padding-left: 40px; padding-right: 20px; padding-bottom: 10px; }
+nav #lgin {  margin-left: 90px;}
+
+
+nav #lgin a:visted { color: white; }
+nav #lgin a:hover { color: white; }
+
+nav #sgnin a:visited { color: white; }
+nav #sgnin a:hover { color: white; }
+
+
+nav ul li a:visited { color: #fff; }
+
+nav ul li a:hover { background-color: #6d0911;  }
+
+
+ nav ul ul { position: absolute; top: 100%; background-color: #2b0306; display: none; }
+
+ nav ul ul li {position: relative;}
+
+
+/* top-level */
+
+nav > ul { padding-left: 200px; }
+
+nav > ul > li  {float: left;}
+
+nav > ul > li >a { width: auto; padding: 10px 100px 15px 40px;  }
+
+nav a[aria-haspopup="true"]::after {
+
+	content: '';
+	display: block; width: 0px; height: 0px;
+	position: absolute;
+	top: 16px; right: 15px;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 4px solid #fff; 
+
+}
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #fff;
+	left: 20px; right: auto;
+	bottom: 6px; top: auto;
+}
+ 
+ /* form modal box*/
+#formmodalbox{
+
+		display: none;
+		background-color: rgba(0, 0, 0, 0.74);
+		left: 0px;
+		top: 0px;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 1000;
+		
+}
+
+#formmodalbox:target {
+
+	display: block;
+}
+#modalbox{
+
+		position: relative;
+		padding:20px;
+		margin:5% 30%;
+		background-color: white;
+		border:1px solid;
+		border-radius: 5px;
+		display: inline-block;
+		-webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+	
+
+}
+
+#formmodalbox #modalbox #table #x{
+
+	text-decoration: none;
+	color: red;
+	margin-left: 90%;
+}
+
+#modalbox #submit{
+
+		background-color: cyan;
+		border-radius: 5px;
+		font-family: 'Ranga', cursive; font-size: 15px;
+}
+
+div table .form{
+
+	border:1px solid;
+	border-radius: 5px;
+	size: 50px;
+	height: 20px;
+	width: 250px;
+	
+}
+
+div table  #addres{
+
+   	border:1px solid;
+	border-radius: 5px;
+	size: 50px;
+	height: 50px;
+	width: 250px;
+
+}
+
+#table td{
+
+		height: 45px;
+
+}
+
+div table #submit{
+
+	width: 100px;
+	height: 25px;
+	border-radius: 5px;
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+@-webkit-keyframes example {
+    from {opacity:0}
+    to {opacity:1;}
+}
+
+@keyframes example {
+    from {opacity:0}
+    to {opacity:1;}
+}
+
+
+/*purchase box*/
+
+#purchasebox{
+
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+
+}
+
+ #container{
+
+	position: absolute;
+	background-color: white;
+	margin:10% 20%;
+	width: auto;
+	max-width: 680px;
+
+
+}
+
+#purchaseboxcancel{
+
+		text-decoration: none;
+		color: red;
+		margin-left: 80%;
+}
+
+#containerbox{
+
+		
+
+
+}
+
+#purchaseitemname{
+
+	text-align: center;
+	display: inline-block;
+
+}
+
+#image{
+
+	overflow:hidden;
+	
+}
+
+#rightcontent{
+
+		display: inline-block;
+		background-color: rgba(0, 0, 0, 0.21);
+		margin-left: 5px;
+		padding-bottom: 55px;
+
+}
+
+#ground{
+
+		padding-bottom: 10px;
+		background-color: rgb(252, 42, 0);
+}
+#quantitytxt{
+
+	display: inline-block;
+	margin-left: 10px;
+}
+#addtocartbtn{
+
+	display: inline-block;
+
+}
+
+#purchaseboxtext{
+
+		width: 40px;
+
+}
+
+.groundelem{
+
+	margin-top: 20px;
+}
+
+#addtocartbtn{
+
+		margin-left: 400px;
+		color: white;
+		background-color: blue;
+		padding: 5px;
+		box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.52);
+		border-radius: 5px;
+
+
+}
+
+.purchaseitem{
+
+			
+			width:200px;
+			border-radius: 10px;
+
+}
+
+
+
+/*login modal box*/
+
+#loginmodalbox{
+
+		display: none;
+		position: absolute;
+		z-index: 50;
+		border-radius: 5px;
+		background-color: white;
+		left: 70%;
+		top: 90%;
+		padding: 0px;
+		-webkit-animation-name: example;
+        -webkit-animation-duration: 1.4s;
+        animation-name: example;
+        animation-duration: 1.1s
+
+}
+
+#loginmodalbox:target{
+
+	display: block;
+}
+
+nav #form button{
+
+	box-shadow: 0 0 12px 0px black;
+	border: none;
+	background-color: yellow;
+	
+	padding-left: 20px;
+	font-size: 18px;
+	border-radius: 5px;
+}
+nav #form button:hover{
+
+	opacity: 0.8;
+}
+
+nav #form #cancel{
+
+	color: black;
+	margin-left: 90%;
+}
+
+nav #form{
+
+		box-shadow: 0 0 20px 4px black;
+		display: inline-block;
+		position: relative;
+}
+
+#form table td{
+
+	height: 40px;
+}
+
+nav #form #usname,#password{
+
+		 border: none;
+   		 border-bottom: 2px solid cyan;
+		 width: 130%;
+}
+/* Footer */
+
+footer {font-size:  .8em ; margin-top: 150px; color: brown;}
+footer .content {display: inline;}
+
+footer a {margin-left: 30px; color: #777;}
+footer a:visited {color: #777;}
+footer a:hover {color: #000;}
+
+ footer {text-align: center;}

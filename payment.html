@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/navigationbar.css">
+    <link rel="stylesheet" type="text/css" href="css/payment.css">
+    <style type="text/css" media="screen">
+    .displayy {
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+	    function OnChangeRadio(radio) {
+	        if(radio.value === "credit")
+	            {
+	            	// alert("credit card selected")
+	                document.getElementById("dynamic-details").style.display = "block";
+
+	            }
+	            else
+	            {
+	            	document.getElementById("dynamic-details").style.display = "none";
+	            }
+	    }
+
+	    function validation() {
+
+	        var addressd = document.forms["paymentform"]["address"].value;
+	        // alert(addressd)
+
+	        var bankno = document.forms["paymentform"]["bankname"].value;
+	        // alert(bankno)
+
+	        var accno = document.forms["paymentform"]["accountno"].value;
+	        // alert(accno)
+
+	        var ccvnno = document.forms["paymentform"]["cvvno"].value;
+	        // alert(ccvnno)
+
+	        var credit = document.getElementById("credi").checked;
+	        
+	        var cash = document.getElementById("cas").checked;
+	        
+	        if ( credit == true ) {
+
+	        		
+
+	            if (accno == "" || ccvnno == "" || bankno == "") {
+
+	                alert("Credit Details must be filled out");
+
+	                return false;
+	            }
+	            else if(addressd == "")
+	        	{
+	        		alert("address must be filled out");
+	        		return false;
+	        	}
+	        	else
+	        	{
+	        		alert("We will bring Thanks");
+	        		return true;
+	        	}
+
+	        } else if (cash == true) {
+	        	if(addressd == "")
+	        	{
+	        		alert("address must be filled out");
+	        		 return false;
+	        	}
+	        	else
+	        	{
+	        		alert("We will bring Thanks");
+	        		return true;
+	        	}
+	            
+	           
+	        } else {
+
+	            alert("choose a method");
+	            return false;
+	        }
+	    }
+    </script>
+    <div id="page">
+        <!-- /header -->
+        <header>
+        </header>
+        <!-- Sections Content -->
+        <section>
+            <aside>
+                <div class="content">
+                    <h1>itmname</h1>
+                    <img src="images/breads.jpg" alt="breads" class="item">
+                    <p>Quantity : </p>
+                    <input type="number" name="quantity" min="0" max="100">
+                </div>
+            </aside>
+            <aside>
+                <div class="content">
+                    <h1>itmname</h1>
+                    <img src="images/breads.jpg" alt="breads" class="item">
+                    <p>Quantity : </p>
+                    <input type="number" name="quantity" min="0" max="100">
+                </div>
+            </aside>
+            <aside>
+                <div class="content">
+                    <h1>itmname</h1>
+                    <img src="images/breads.jpg" alt="breads" class="item">
+                    <p>Quantity : </p>
+                    <input type="number" name="quantity" min="0" max="100">
+                </div>
+            </aside>
+            <aside>
+                <div id="paymentboxamount">
+                    <p>Total Amount : </p>
+                    <h1><p class="amountdiv">Rs.</p><p id="totalamoun" class="amountdiv">1000</p><p class="amountdiv">/=</p></h1>
+                   <a href="http://localhost/Bakelogy/Ishan/paymenthistry.php" style="text-decoration: none; background-color: green; border-radius: 5px; ">Purchase history</a>
+                    <input type="submit" name="buy" value="BUY" id="buy" style="padding: 5px 50px; font-size:30px;  border-radius: 10px; font-family: 'Ranga', cursive; font-size: 20px; ">
+                </div>
+            </aside>
+            <!-- Sign Up Box -->
+            <div id="formmodalbox">
+                <div id="modalbox">
+                    <div id="table">
+                        <a href="#" id="x">X</a>
+                        <form>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Name :
+                                    </td>
+                                    <td>
+                                        <input type="text" name="is" id="name" class="form" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        User Name :
+                                    </td>
+                                    <td>
+                                        <input type="text" name="is" id="username" class="form" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        password :
+                                    </td>
+                                    <td>
+                                        <input type="password" name="is" id="passwordname" class="form" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Confirm Password :
+                                    </td>
+                                    <td>
+                                        <input type="password" name="is" id="confirmpasswordname" class="form" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td>
+                                        <input type="text" name="ag" class="form" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Addres :
+                                    </td>
+                                    <td>
+                                        <textarea type="textarea" name="addres" class="form" id="addres" required></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Contact Num :
+                                    </td>
+                                    <td>
+                                        <input type="text" name="con" class="form" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Email :
+                                    </td>
+                                    <td>
+                                        <input type="email" name="em" class="form" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input type="submit" name="submit" value="Submit" id="submit" onclick="window.location.href='index.html'">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--payment form box-->
+            <div id="payment">
+                <div id="paymentbox">
+                    <div class="mycontainer">
+
+                    	 <a href="payment.html" style="text-decoration: none; color: red; margin-left: 90%; margin-bottom: 10px;">X</a>
+
+                        <form name="paymentform" action="payment.php" method="post" onsubmit="return validation()" accept-charset="utf-8">
+                            <label for="fname">Deliver Address</label>
+                            <textarea id="address" name="address" placeholder="Your Address" style="height:70px; width: 100%"></textarea>
+
+
+                            <h5>Payment Method</h5>
+                            <label class="inlinmethod">Credit Card : </label>
+                            <input onclick="OnChangeRadio (this)" type="radio" name="method" id="credi" value="credit" class="inlinmethod">
+
+                            <label class="inlinmethod">Cash : </label>
+                            <input onclick="OnChangeRadio (this)" type="radio" name="method" class="inlinmethod" value="cash" id="cas">
+                            <br>
+                            <br>
+
+
+                            <div id="dynamic-details" style="display:none;">
+                                <label for="lname">Bank name</label>
+                                <input type="text" id="bankname" name="bankname" placeholder="Your Bank name..">
+                                <label for="lname">Account No</label>
+                                <input type="number" id="accountno" name="accountno" placeholder="Your Account number..">
+                                <label for="lname">Cvv No </label>
+                                <input type="number" id="cvvno" name="cvvno" placeholder="Your cvv number..">
+                            </div>
+
+                            <!-- <input id="sub" type="submit" value="Submit"> -->
+                            <input id="sub" type="submit" name="deliver" value="Confirm">
+                        </form>
+                    </div>
+                    <!--  <form name="paymentform" action="" method="post" onsubmit="return validation()" accept-charset="utf-8">
+                        <table>
+                            <a href="payment.html" style="text-decoration: none; color: red; margin-left: 90%; margin-bottom: 10px;">X</a>
+                            
+                            <tr>
+                                <td>
+                                    Deliver Address :
+                                   
+                                </td>
+                                <td>
+                                    <textarea name="deliveradres" style="margin: 0px; width: 195px; height: 60px;">
+                                    </textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Payment Method :
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="inlinmethod">Credit Card : </p>
+                                    <input onclick="OnChangeRadio (this)" type="radio" name="method" id="credi" value="credit" class="inlinmethod">
+                                </td>
+                                <td>
+                                    <p class="inlinmethod">Cash : </p>
+                                    <input onclick="OnChangeRadio (this)" type="radio" name="method" class="inlinmethod" value="cash" id="cas">
+                                </td>
+                            </tr>
+                            
+                                <tr>
+                                    <td>
+                                        <p class="displayy">Bank name : </p>
+                                    </td>
+                                    <td>
+                                        <input type="text" name="bankname" class="displayy">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="displayy">Account No : </p>
+                                        
+                                    </td>
+                                    <td>
+                                        <input type="text" name="accno" class="displayy">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="displayy">Cvv No : </p>
+                                        
+                                    </td>
+                                    <td>
+                                        <input type="text" name="cvvno" class="displayy" class="display">
+                                    </td>
+                                </tr>
+                           
+                            <tr>
+                                <td>
+                                    <input type="submit" name="deliver" value="Confirm" style="padding: 10px 30px; margin-left: 100px; background-color: orange; border-radius: 10px; font-family: 'Ranga', cursive; font-size: 20px;">
+                                </td>
+                            </tr>
+                        </table>
+                    </form> -->
+                </div>
+            </div>
+            <!-- Navigation Bar -->
+            <nav>
+                <a id="alogo" href="index.html" title="logo"></a>
+                <ul>
+                    <li>
+                        <a title="Home" href="index.html">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a title="Gallery" href="#">Gallery</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a title="About Us" href="#" aria-haspopup="true">About Us</a>
+                        <ul>
+                            <li>
+                                <a title="Contact Us" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <a id="navcart" title="Cart" href="#"></a>
+                <input type="text" name="search" placeholder="Search.." id="search">
+                <a title="Search" id="schimg" href="#"></a>
+                <a href="#loginmodalbox" id="lgin" title="Login">Login | </a>
+                <!-- Login Box -->
+                <div id="loginmodalbox">
+                    <div id="form">
+                        <a href="#" id="cancel">X</a>
+                        <form>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="text" id="usname" placeholder="User Name" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="password" id="password" placeholder="Password" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" value="">remeber me
+                                    </td>
+                                    <td>
+                                        <button>Enter</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <a href="#formmodalbox" id="sgnin" title="Sign in">Sign in</a>
+            </nav>
+            <!-- Footer -->
+            <footer style="display:inline-block; width: 50%; margin-left: 20%;">
+                &copy;Bakelogy
+                <div class="Content">
+                    <a title="Privacy Policy" href="#">Privacy Policy</a>
+                    <a title="Terms of Services" href="#">Terms of Services</a>
+                </div>
+            </footer>
+            <script src="js/payment.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+@import url(<link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">);
+
+body { font-family: 'Ranga', cursive; font-size: 20px; }
+
+/*#page{ margin: 0 auto; position: relative;}*/
+
+header{height: 600px; background: green url(../images/3.jpg) no-repeat center bottom; position: relative; width: 100%;}
+
+
+/* section all */  
+
+section {padding: 0 30px;}
+section::after{content:''; display: block; clear: both;}
+
+/* section  */
+
+section { margin-top: 20px; margin-bottom: 30px; padding: 0; }
+section aside {width: 25%; float: left; text-align: center;}
+#mainsectionhead{text-align: center;font-size: 50px; padding-bottom: 50px;}
+
+section  .content a {text-decoration: none; color: black;}
+section .content a:visited {color: black;}
+section .content a:hover {color: black;}
+
+section  .cakes{ margin: 15px; border-radius: 10px; background-size:  150px;   }
+section  .breads{ margin: 15px; background-size:  150px;  }
+section  .cookies{ margin: 15px; background-size:  150px;  }
+section  .pies{ margin: 15px;background-size: 150px;  }
+
+
+section  .cakes  a #weddingcakes{
+
+				border-radius: 10px;
+				width: 200px;
+
+
+}
+
+section  .breads a #breads{
+
+			border-radius: 10px;
+			width: 200px;
+			
+}
+
+section   .cookies a #cookies{
+	        
+	        border-radius: 10px;
+			width: 200px;
+
+}
+section  .pies a #pies{
+
+	        border-radius: 10px;
+			width: 200px;
+}
